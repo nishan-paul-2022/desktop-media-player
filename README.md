@@ -1,4 +1,4 @@
-# desktop_media_player
+# desktop-media-player
 
 ## Tech stack that I've used to build this project:
 - Python 
