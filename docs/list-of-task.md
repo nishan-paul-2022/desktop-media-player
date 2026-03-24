@@ -149,16 +149,8 @@ Mandatory baseline for all prompts: follow [Engineering Standards Charter](engin
 
 ---
 
-## Implementation Rules (Global)
-1.  Keep backend engine APIs stable and versioned once the frontend integration begins.
-2.  Add lightweight regression checks for open/play/seek/subtitle/PiP flows before each major merge.
-3.  Track performance with repeatable scenarios and record p50/p95 timings.
-4.  Prefer measurable targets over absolute claims.
-5.  Enforce naming/file conventions and design-pattern rules from the standards charter.
-6.  Treat Definition of Done in the standards charter as mandatory before closing a prompt.
-
----
-
 ## How to use prompt
 
-Prompt X from @list-of-task.md, strictly following @engineering-standards.md, and do not proceed until all Acceptance Checklist items for Prompt X are satisfied.
+```
+Prompt @number from @list-of-task.md, strictly following @engineering-standards.md, and do not proceed until all Acceptance Checklist items for Prompt @number are satisfied.
+```
