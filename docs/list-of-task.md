@@ -22,10 +22,12 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
     *   `/src`: React frontend.
     *   `/docs`: Architecture and tasks.
 
-### ✅ Acceptance Criteria
-- Project boots locally with one command for frontend and one command for Tauri dev mode.
-- Tailwind v4 styles are applied from the main stylesheet without legacy config-only setup.
-- A short setup section documents both native and Docker workflows.
+### ✅ Acceptance Checklist
+- [ ] Frontend starts locally with a single documented command.
+- [ ] Tauri dev mode starts locally with a single documented command.
+- [ ] Tailwind v4 styles are confirmed from the main stylesheet (CSS-first flow).
+- [ ] No legacy config-only Tailwind setup is required for styling to work.
+- [ ] Setup docs include both native workflow and optional Docker workflow.
 
 ---
 
@@ -44,10 +46,12 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
     *   Validate inputs and return structured errors for invalid paths, seek out-of-range, and unavailable engine state.
 4.  **Error Handling:** Use a custom `Result` type with structured errors for playback failures.
 
-### ✅ Acceptance Criteria
-- Commands are non-blocking from UI perspective and return typed errors.
-- Engine emits state events for pause, position, duration, track changes, and playback end.
-- Rapid seek spam does not deadlock or crash the backend.
+### ✅ Acceptance Checklist
+- [ ] All commands return without blocking UI interactions.
+- [ ] Command failures return typed/structured errors.
+- [ ] Engine emits pause, position, duration, track-change, and playback-end events.
+- [ ] Repeated rapid seek input does not deadlock backend worker paths.
+- [ ] Repeated rapid seek input does not crash process or corrupt playback state.
 
 ---
 
@@ -65,10 +69,12 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
 3.  **Animations:**
     *   Use **Framer Motion** for smooth transitions: control bar sliding in/out, volume slider expansion, and play/pause icon morphing.
 
-### ✅ Acceptance Criteria
-- UI remains usable with keyboard-only navigation.
-- Animation is smooth and does not cause visible playback stutter on reference hardware.
-- Controls are fully responsive on both desktop and narrow window widths.
+### ✅ Acceptance Checklist
+- [ ] Core controls are reachable and usable via keyboard-only navigation.
+- [ ] Visible focus states are present for interactive controls.
+- [ ] UI animation remains smooth on reference hardware.
+- [ ] Animations do not cause visible playback stutter.
+- [ ] Controls remain usable on desktop and narrow window widths.
 
 ---
 
@@ -87,10 +93,12 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
 3.  **Responsive Video Surface:**
     *   Ensure the video expands to fill the window while maintaining aspect ratio, using Tauri's native window resizing events.
 
-### ✅ Acceptance Criteria
-- No noticeable UI-state drift during continuous playback for at least 10 minutes.
-- Timeline drag interaction remains smooth while video is playing.
-- Shortcut handling works without stealing input focus from text fields.
+### ✅ Acceptance Checklist
+- [ ] Continuous playback for 10 minutes shows no noticeable UI-state drift.
+- [ ] Timeline drag/scrub remains smooth while playback is active.
+- [ ] Keyboard shortcuts work for media controls.
+- [ ] Shortcut handling does not trigger while typing in text fields.
+- [ ] Event throttling keeps render frequency stable under position-update load.
 
 ---
 
@@ -108,10 +116,12 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
     *   Optimize the UI render cycle to keep playback smooth and avoid dropped frames caused by UI work.
     *   Implement a "Picture-in-Picture" (PiP) mode using Tauri's multi-window capabilities.
 
-### ✅ Acceptance Criteria
-- Embedded and external subtitles can be switched during playback without restart.
-- Hardware decode attempts first and falls back cleanly when unavailable.
-- PiP window can be opened, controlled, and closed without leaving orphaned state.
+### ✅ Acceptance Checklist
+- [ ] Embedded subtitle tracks can be switched during playback without restart.
+- [ ] External `.srt` and `.vtt` files can be loaded and switched during playback.
+- [ ] Hardware decode is attempted first when supported.
+- [ ] Software decode fallback activates cleanly when hardware decode is unavailable.
+- [ ] PiP window open/control/close cycle leaves no orphaned state.
 
 ---
 
@@ -127,10 +137,13 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
     *   Create a GitHub Action (CI/CD) that builds the binary for all three platforms.
     *   Implement a final optimization pass for the binary size and memory footprint.
 
-### ✅ Acceptance Criteria
-- CI produces artifacts for Linux, Windows, and macOS on tagged or manual release runs.
-- Security permissions are explicit and minimal (no broad file/system access unless required).
-- Release checklist includes signing/notarization strategy per platform and a smoke-test script.
+### ✅ Acceptance Checklist
+- [ ] CI creates release artifacts for Linux, Windows, and macOS.
+- [ ] CI can be triggered via tagged release or manual dispatch.
+- [ ] Tauri v2 capability/permission files are explicit and least-privilege.
+- [ ] No broad file/system permissions are granted unless justified and documented.
+- [ ] Release process includes signing/notarization strategy per platform.
+- [ ] Release process includes a smoke-test script for install and first-run validation.
 
 ---
 
