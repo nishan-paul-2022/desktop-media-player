@@ -4,6 +4,8 @@ This document contains a series of highly structured, interlinked prompts design
 
 Use each prompt with explicit acceptance checks. Do not advance to the next prompt until the current prompt passes its own checks.
 
+Mandatory baseline for all prompts: follow [Engineering Standards Charter](engineering-standards.md).
+
 ---
 
 ## 🛠️ Prompt 1: Dockerized Foundation & Project Initialization
@@ -152,3 +154,5 @@ Use each prompt with explicit acceptance checks. Do not advance to the next prom
 2.  Add lightweight regression checks for open/play/seek/subtitle/PiP flows before each major merge.
 3.  Track performance with repeatable scenarios and record p50/p95 timings.
 4.  Prefer measurable targets over absolute claims.
+5.  Enforce naming/file conventions and design-pattern rules from the standards charter.
+6.  Treat Definition of Done in the standards charter as mandatory before closing a prompt.

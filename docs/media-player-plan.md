@@ -3,6 +3,9 @@
 ## 1. Project Overview
 A high-performance, cross-platform desktop media player designed for a premium user experience. Inspired by VLC's versatility and IINA's modern aesthetics.
 
+### Engineering Baseline
+All implementation must follow the project standards in [Engineering Standards Charter](engineering-standards.md).
+
 ### Product Goal
 Deliver a stable, low-latency player for everyday and power users with modern UX, broad format compatibility, and predictable resource usage.
 
@@ -60,6 +63,7 @@ graph TD
 - Initialize Tauri v2 project.
 - Set up Rust backend with `libmpv` integration.
 - Implement basic window and video surface.
+- Establish linters/formatters and enforce naming/convention rules from the standards charter.
 
 ### Phase 2: Core Logic
 - Play/Pause/Seek functionality.
@@ -82,6 +86,7 @@ graph TD
 - **Gate C (Premium UI):** Animated controls are smooth and do not cause playback stutter.
 - **Gate D (Advanced):** Subtitles, playlist, and PiP complete with basic regression checks.
 - **Gate E (Release):** Cross-platform packaging, signing/notarization strategy, and CI artifacts.
+- **Gate F (Standards Compliance):** Naming, code conventions, security permissions, and DoD checks pass per standards charter.
 
 ## 9. Success Metrics
 - **Startup Time:** p95 under 2.5 seconds for warm start on reference hardware.
