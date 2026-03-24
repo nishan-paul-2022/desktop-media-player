@@ -1,4 +1,4 @@
-# <p align="center"> <img src="https://img.icons8.com/isometric/512/000000/media-player.png" width="100" /> <br> Sonix Media Player </p>
+# <p align="center"> <img src="docs/logo-sonix.svg" width="100" /> <br> Sonix Media Player </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Release-v1.0.0-blue?style=for-the-badge&logo=github" />
@@ -97,6 +97,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <div align="center">
-  <img src="app-web/public/company-logo.svg" alt="KAI Logo" width="80" height="80" />
+  <img src="docs/logo-kai.svg" alt="KAI Logo" width="80" height="80" />
   <p>Built with ❤️ by <a href="http://kaiofficial.xyz/" target="_blank"><b>KAI</b></a></p>
 </div>
